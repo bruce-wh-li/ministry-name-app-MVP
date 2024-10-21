@@ -162,7 +162,7 @@ jobs:
           openshift_server_url: ${{ env.OPENSHIFT_SERVER }}
           openshift_token: ${{ env.OPENSHIFT_TOKEN }}
           insecure_skip_tls_verify: true
-          namespace: fe6594-dev
+          namespace: ${{ secrets.OPENSHIFT_NAMESPACE }}
 
       - name: Create and expose app
         id: deploy-and-expose
