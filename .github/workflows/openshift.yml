@@ -30,12 +30,12 @@ env:
   # To get a permanent token, refer to https://github.com/redhat-actions/oc-login/wiki/Using-a-Service-Account-for-GitHub-Actions
   OPENSHIFT_SERVER: ${{ secrets.OPENSHIFT_SERVER }}
   OPENSHIFT_TOKEN: ${{ secrets.OPENSHIFT_TOKEN }}
-  OPENSHIFT_NAMESPACE: fe6594-dev
+  OPENSHIFT_NAMESPACE: ${{ secrets.OPENSHIFT_NAMESPACE }}
 
   APP_NAME: ministry-name-app
   APP_PORT: "8080"
 
-  GITHUB_OWNER: vitik-k
+  GITHUB_OWNER: bruce-wh-li
 
   IMAGE_REGISTRY: ghcr.io/${{ github.repository_owner }}
   IMAGE_REGISTRY_USER: ${{ github.actor }}
@@ -43,8 +43,8 @@ env:
 
   # 🖊️ EDIT to specify custom tags for the container image, or default tags will be generated below.
   IMAGE_TAGS: |
-    ghcr.io/vitik-k/ministry-name-app:latest
-    ghcr.io/vitik-k/ministry-name-app:${{ github.sha }}
+    ghcr.io/bruce-wh-li/ministry-name-app:latest
+    ghcr.io/bruce-wh-li/ministry-name-app:${{ github.sha }}
 
 on:
   workflow_dispatch:
