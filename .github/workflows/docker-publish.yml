@@ -6,7 +6,8 @@ name: Docker
 # documentation.
 
 on:
-  schedule:
+  workflow_dispatch:
+  #schedule:
     - cron: '39 9 * * *'
   push:
     branches: [ "master" ]
