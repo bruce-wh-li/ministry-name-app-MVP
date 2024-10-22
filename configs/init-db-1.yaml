@@ -2,7 +2,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   name: init-db-1
-  namespace: fe6594-dev
+  namespace: fe6594-test
 spec:
   selector: {}
   template:
@@ -16,7 +16,7 @@ spec:
             - name: POSTGRES_DB
               value: nameapp
             - name: POSTGRES_HOST
-              value: postgres.fe6594-dev.svc.cluster.local
+              value: postgres.fe6594-test.svc.cluster.local
             - name: POSTGRES_PASSWORD
               value: mypass            
             - name: POSTGRES_USER
