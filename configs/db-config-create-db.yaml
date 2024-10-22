@@ -2,7 +2,7 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: db-donfig-create-db
-  namespace: fe6594-dev
+  namespace:fe6594-test
   uid: bbdd94d3-d13f-44b9-9117-64fc3c1cda97
   resourceVersion: '2969481730'
   creationTimestamp: '2024-07-17T15:23:34Z'
